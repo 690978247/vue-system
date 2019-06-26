@@ -1,0 +1,14 @@
+// css in js实现换肤功能（未实现）
+// base color
+$backColor:#4C8CCA;
+$textColor:#4C8CCA;
+$btnColor: #E65D6E;
+
+
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+    backColor: $backColor;
+    textColor: $textColor;
+    btnColor: $btnColor;
+}

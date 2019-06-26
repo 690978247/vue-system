@@ -1,0 +1,136 @@
+$maincolor: #4c8cca;
+$backcolor: #eff4fa;
+$subcolcr: #f6f7fb;
+$menuHover: #c7d1dd;
+$menuActive: #c7d1dd;
+$toolbarHove: #5ba5f0;
+$expot: #48be8e;
+$txt: #fff;
+
+.blue {
+  .table-a {
+    color: $maincolor;
+    text-decoration: underline;
+  }
+  /*  ---------------layout--------------- */
+  .navbar {
+    background: $maincolor;
+    .block:hover {
+      color: $maincolor;
+    }
+  }
+
+  // .main-container {
+  //   background: $subcolcr;
+  // }
+
+  .tags-view-container {
+    background: $backcolor;
+  }
+
+  /*  ---------------菜单--------------- */
+  .sidebar-title {
+    color: $maincolor;
+  }
+
+  .sidebar-back {
+    background: $backcolor;
+  }
+
+  .sidebar-container {
+    background: $backcolor;
+  }
+  .el-menu-item.is-active {
+    color: $txt;
+    background: $menuActive !important;
+  }
+  /* 无子菜单的一级菜单active时 */
+  .is-active .menuicon {
+    color: $txt;
+  }
+  /* 有子菜单的一级菜单active时 */
+  .is-active .el-submenu__title .menuicon {
+    color: #909399;
+  }
+
+  .submenu-title-noDropdown,
+  .el-submenu__title {
+    &:hover {
+      background-color: $menuHover !important;
+      color: $txt;
+
+      .menuicon {
+        color: $txt;
+      }
+    }
+  }
+
+  .sidebar-container {
+    .is-active > .el-submenu__title {
+      color: #0c0c0c;
+      &:hover {
+        color: $txt;
+      }
+    }
+    & .nest-menu .el-submenu > .el-submenu__title,
+    & .el-submenu .el-menu-item {
+      background-color: $subcolcr;
+
+      &:hover {
+        background-color: $menuHover;
+        color: $txt;
+      }
+    }
+  }
+
+  /*  ---------------查询页面--------------- */
+  .searchbtn {
+    border-color: $maincolor;
+    color: $maincolor;
+    &:hover {
+      background-color: $maincolor;
+      color: $txt;
+    }
+  }
+
+  .cancelbtn {
+    background-color: rgb(248, 248, 250);
+    border-color: #d8dee3;
+    color: #a6aab3;
+
+    &:hover {
+      background-color: #dee8ee;
+      border-color: #d8dee3;
+      color: #969da5;
+    }
+  }
+  .toolbar .btn {
+    background-color: $maincolor;
+    color: $txt;
+
+    &:hover {
+      background-color: $toolbarHove;
+    }
+  }
+
+  .toolbar .expotbtn {
+    background-color: $expot;
+    color: $txt;
+
+    &:hover {
+      background-color: $toolbarHove;
+    }
+  }
+  .el-button--primary:focus,
+  .el-button--primary:hover {
+    background: $toolbarHove !important;
+    border-color: $toolbarHove !important;
+  }
+  .el-pagination.is-background .el-pager li:not(.disabled).active {
+    background: $maincolor !important;
+  }
+
+  .el-dialog__header {
+    background-color: #eff4fa;
+  }
+}

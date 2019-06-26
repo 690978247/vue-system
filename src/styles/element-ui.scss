@@ -1,0 +1,244 @@
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d4d4d4;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ccc;
+}
+
+.el-form-item__label {
+  color: #676767;
+  font-weight: 500;
+  font-size: 13px;
+  padding: 0 2px 0 0;
+}
+
+.el-pagination__jump .el-input__inner {
+  border-radius: 3px;
+}
+
+.el-input__inner {
+  background-color: #f6f7fb;
+  border-radius: 0px;
+  border: 1px solid #dddfed;
+  line-height: 31px;
+  height: 31px !important;
+}
+
+.searchblock .el-form-item {
+  margin-bottom: 8px;
+}
+
+.el-select {
+  width: 100%;
+}
+
+.inputDate {
+  width: 100% !important;
+}
+
+.el-input__prefix {
+  right: 5px;
+  left: auto;
+}
+
+.el-input--prefix .el-input__inner {
+  padding-left: 15px;
+}
+
+.el-button {
+  border-radius: 0px;
+  width: 90px;
+  line-height: 0.7;
+}
+
+.el-table__empty-block {
+  height: 200px;
+}
+
+.el-table__empty-block ::before {
+  content: "\e644";
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 60px;
+  vertical-align: middle;
+  color: #ebeef5;
+  margin-right: 15px;
+}
+
+.el-table__empty-text {
+  color: #ccc;
+}
+
+.el-table td, .el-table th {
+  padding: 5px 0;
+}
+
+.el-table th {
+  background-color: #fafafa;
+  border-right: none;
+}
+
+.el-pagination__jump {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.el-pagination .el-select .el-input {
+  margin: 0px;
+}
+
+.el-pagination {
+  padding: 2px 0px;
+}
+
+.el-pagination__sizes {
+  margin: 0;
+}
+
+.el-pagination__jump .el-input__inner {
+  border-radius: 0px;
+  height: 28px !important;
+}
+
+.el-pagination .el-select .el-input .el-input__inner {
+  padding-right: 25px;
+  border-radius: 0px;
+  height: 28px !important;
+}
+
+.el-dialog {
+  min-width: 690px;
+}
+
+.el-dialog__footer {
+  padding: 15px 20px 20px;
+  border-top: 1px solid #ebeef5;
+}
+
+.el-dialog__header {
+  padding: 20px 20px 20px;
+  border-bottom: 1px solid #ebeef5;
+}
+
+.el-dialog__title {
+  line-height: 15px;
+  font-size: 15px;
+}
+
+.el-dialog__header {
+  padding: 15px 15px 15px 25px;
+  border-bottom: 1px solid #ebeef5;
+}
+
+.el-dialog__headerbtn {
+  top: 15px;
+}
+
+.el-input-number .el-input__inner {
+  text-align: left;
+}
+
+.el-input-number--medium {
+  width: 100%;
+}
+
+.el-input.is-disabled .el-input__inner {
+  background-color: #e7e9ec;
+  border-color: #e7e9ec;
+  color: #939494;
+}
+
+.el-form-item__label, .tags-view-item, .toolbar .btn,.toolbar .expotbtn{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.el-table__empty-text {
+  color: #e2e0e0;
+  font-size: 16px;
+}
+
+.el-button--primary.is-disabled{
+  background-color: #dad5d5 !important;
+  border-color: #dad5d5 !important;
+}
+
+.el-button--primary.is-disabled:hover{
+  background-color: #dad5d5 !important;
+  border-color: #dad5d5 !important;
+}
+
+.el-button.is-disabled, .el-button.is-disabled:focus, .el-button.is-disabled:hover {
+  color: #abacad !important;
+  cursor: not-allowed;
+  background-image: none;
+  background-color: #dad5d5;
+  border-color: #dad5d5 !important;
+}
+
+.el-textarea__inner {
+  background-color: #f6f7fb;
+  border-radius: 0px;
+}
+
+.el-textarea.is-disabled .el-textarea__inner {
+  background-color: #e7e9ec;
+  border-color: #e7e9ec;
+  color: #939494;
+}
+
+.el-tree {
+  background: #f6f7fb;
+  width: 100%;
+  padding: 10px;
+}
+
+.el-tooltip__popper {
+max-width: 1000px;
+/* 给table show-overflow-tooltip 内容全为数字时添加换行*/
+word-break: break-all;
+}
+.requirecolor{
+color:red;
+letter-spacing:2px;
+}
+
+.pdfmain .el-radio__label{
+  font-size: 1.5em;
+}
+
+.pdfmain .el-radio__inner{
+  width: 21px;
+  height: 21px;
+}
+
+.pdfmain .el-tabs__item{
+  font-size: 1.0em;
+}
+
+.tab-row-last .el-input {
+  width: 40%;
+  border: none;
+  font-size: 17px;
+}
+.tab-row-last .el-input__inner {
+  background-color: #fff;
+  border-radius: 0px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #ccc;
+}

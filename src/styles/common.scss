@@ -1,0 +1,119 @@
+.custom-loading {
+  font-size: 40px;
+}
+
+.page-container {
+  width: 100%;
+  height: 100%;
+/*   position: relative;
+  transition: top 1.5s ease; */
+}
+.searchblock {
+  background-color: #fff;
+  height: auto !important;
+  overflow: hidden;
+  max-height: 0;
+  box-sizing: border-box;
+  transition: all 0.5s ease-out;
+  .input {
+    width: 32%;
+    min-width: 100px !important;
+    display: inline-block;
+    color: #676767;
+  }
+  .formblock {
+    padding: 20px 0px 10px 10px;
+    width: 100%;
+  }
+}
+.search-show {
+  /* 这里max-height设置一个足够大的数，但不能太大 */
+  transition-timing-function: ease-in;
+  max-height: 500px;
+}
+.margin-botom {
+  margin-bottom: 15px;
+}
+
+.collapseTab {
+  width: 100%;
+  padding: 0px !important;
+  height: 20px;
+  top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 10px solid #f6f7fb;
+  color: rgb(189, 189, 189);
+}
+.collapseTab-up,
+.collapseTab-down {
+  width: 80px;
+  height: 20px;
+  font-size: 12px;
+  line-height: 20px;
+  cursor: pointer;
+  position: relative;
+  left: 48%;
+  text-align: center;
+  color: #bdbdbd;
+  background-color: #f6f7fb;
+  border-radius: 8px;
+}
+.collapseTab-up {
+  bottom: 25px;
+}
+.collapseTab-down {
+  bottom: 15px;
+}
+.icon-down {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+}
+
+.resultblock {
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  padding: 0px 15px 5px 15px !important;
+}
+.toolbar {
+  width: 100%;
+  height: 45px;
+
+  .btn,
+  .expotbtn {
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    .icon {
+      font-size: 13px;
+      margin-right: 6px;
+    }
+  }
+
+  .btn {
+    margin-right: 13px;
+  }
+
+  .pull-left {
+    float: left;
+  }
+
+  .pull-right {
+    float: right;
+  }
+}
+.pagination-container {
+  margin-top: 12px;
+}
