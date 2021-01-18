@@ -3,6 +3,7 @@ import { MessageBox, Message } from 'element-ui'
 import store from '@/store'
 import { getToken } from '@/utils/auth'
 import { Loading } from 'element-ui'
+import { debounce } from '@/utils'
 
 // create an axios instance
 const service = axios.create({
@@ -12,20 +13,47 @@ const service = axios.create({
 })
 
 var load
+let number = 0; 
+// function startLoad() {
+//   load = Loading.service({
+//     lock: true,
+//     spinner: 'el-icon-loading',
+//     customClass: 'custom-loading',
+//     background: 'rgba(0, 0, 0, 0.5)'
+//   })
+// }
+// function endLoad() {
+//   load.close()
+// }
+
 function startLoad() {
-  load = Loading.service({
-    lock: true,
-    spinner: 'el-icon-loading',
-    customClass: 'custom-loading',
-    background: 'rgba(0, 0, 0, 0.5)'
-  })
-}
-function endLoad() {
-  load.close()
+  let main = document.getElementsByTagName('body')
+  if (main) {
+     if (number === 0 && !load) {
+        load = Loading.service();
+     }
+     number++;
+  }
 }
 
+function endLoad() {
+  Vue.nextTick(() => { // 以服务的方式调用的 Loading 需要异步关闭
+     number--;
+     number = Math.max(number, 0); // 保证大于等于0
+     if (number === 0) {
+        if (load) {
+           hideLoading()
+        }
+     }
+  });
+}
+
+var hideLoading = debounce(() => {
+  load.close();
+  load = null;
+}, 300);
+
 // request interceptor
-var num = 0
 service.interceptors.request.use(
   config => {
     // do something before request is sent
@@ -36,7 +64,6 @@ service.interceptors.request.use(
       config.headers['X-Token'] = getToken()
       config.headers.common['Authorization'] = 'Bearer ' + getToken()
     }
-    num += 1
     startLoad()
     return config
   },
@@ -62,22 +89,12 @@ service.interceptors.response.use(
   response => {
     // response code=200
     const res = response.data
-    num -= 1
-    if (num <= 0) {
-      endLoad()
-    } else {
-      startLoad()
-    }
+    endLoad()
     return res
   },
   response => {
     // response code!=200
-    num -= 1
-    if (num <= 0) {
-      endLoad()
-    } else {
-      startLoad()
-    }
+    endLoad()
 
     if (response.response === undefined) {
       Message({
@@ -120,12 +137,7 @@ service.interceptors.response.use(
     }
   },
   error => {
-    num -= 1
-    if (num <= 0) {
-      endLoad()
-    } else {
-      startLoad()
-    }
+    endLoad()
     console.log('err' + error) // for debug
     Message({
       message: error.message,
